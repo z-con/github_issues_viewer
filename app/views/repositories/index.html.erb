@@ -1,0 +1,15 @@
+<h1>GitHub Issue Viewer</h1>
+
+<% if flash[:alert] %>
+  <p><%= flash[:alert] %></p>
+<% end %>
+
+<%= form_with url: repositories_issues_path, method: :get do |form| %>
+  <div>
+    <%= form.label :repo, "Repository" %>
+    <%= form.text_field :repo, placeholder: "username/reponame" %>
+  </div>
+  <div>
+    <%= form.submit "View Issues" %>
+  </div>
+<% end %>

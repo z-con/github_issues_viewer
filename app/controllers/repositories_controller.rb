@@ -1,16 +1,19 @@
 class RepositoriesController < ApplicationController
-  before_action :octokit_client
+  before_action :octokit_client, only: [:issues]
+
+  def index
+  end
 
   def issues
     repo = params[:repo]
     @issues = @client.issues(repo)
   rescue Octokit::NotFound
-    @issues = []
+    redirect_to root_path, alert: "Repository not found"
   end
 
   private
 
   def octokit_client
-    @client ||= Octokit::Client.new(access_token: "f366cacd10846195fb611ea5fb0c4778d51d3d33")
-  end
+    @client ||= Octokit::Client.new(access_token: ENV["GITHUB_TOKEN"])
+  end  
 end
