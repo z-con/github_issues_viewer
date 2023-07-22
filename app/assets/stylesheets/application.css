@@ -3,11 +3,33 @@ body {
     color: #fff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
     flex-direction: column;
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+  
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.issues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-inline {
@@ -49,6 +71,7 @@ a:hover {
     margin: 4px 2px;
     transition-duration: 0.4s; 
     cursor: pointer; 
+    border-radius: 10px;
 }
 
 .btn:hover {
@@ -57,19 +80,26 @@ a:hover {
 }
 
 .issue {
-    background-color: #5e2190; 
+    background: linear-gradient(45deg, rgb(246, 4, 218), rgb(85, 16, 110));
     border-radius: 10px;
-    padding: 15px; 
-    margin-bottom: 20px; 
-    width: 50vw; 
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 50vw;
     max-width: 800px;
-    color: #ffffff; 
+    color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
     margin-left: auto;
     margin-right: auto;
+    white-space: normal;
+    word-wrap: break-word;
 }
   
 .issue:hover {
     box-shadow: 0 8px 16px 0 white;
 }
+
+.form-element {
+    margin-bottom: 20px;
+  }
+  

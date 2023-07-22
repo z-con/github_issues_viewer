@@ -5,11 +5,12 @@
 <% end %>
 
 <%= form_with url: repositories_issues_path, method: :get do |form| %>
-  <div>
+  <div class="form-element">
     <%= form.label :repo, "Repository" %>
-    <%= form.text_field :repo, placeholder: "username/reponame" %>
+    <%= form.text_field :repo, placeholder: "username/reponame", class: "form-control" %>
   </div>
-  <div>
-    <%= form.submit "View Issues" %>
+  <div class="form-element">
+    <%= form.submit "View Issues", class: "btn" %>
   </div>
 <% end %>
+
