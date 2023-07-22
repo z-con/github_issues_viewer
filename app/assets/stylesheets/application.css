@@ -93,6 +93,9 @@ a:hover {
     margin-right: auto;
     white-space: normal;
     word-wrap: break-word;
+    width: 100%;
+    overflow: auto;
+    box-sizing: border-box;
 }
   
 .issue:hover {
