@@ -1,61 +1,75 @@
 body {
-    font-family: sans-serif;
-    color: #ffffff; /* white text */
-    background-color: #282c34; /* dark background */
+    background-color: hsl(0, 0%, 0%); 
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .form-inline {
-    background-color: #44475a; /* darker background */
-    padding: 15px;
-    border-radius: 5px;
-    color: #fff; /* white text */
-    width: 100%;
-    max-width: 500px; /* limit width */
-    margin: 15px auto; /* center and add space around */
-  }
-  
-  .card {
-    background-color: #44475a; /* darker background */
-    padding: 15px;
-    border-radius: 5px;
-    color: #fff; /* white text */
-    width: 100%;
-    max-width: 500px; /* limit width */
-    margin: 15px auto; /* center and add space around */
-  }
-  
-  a {
-    color: #50fa7b; /* green text */
-  }
-  
-  a:hover {
-    color: #8be9fd; /* cyan text on hover */
-  }
+    flex-direction: column;
+}
 
-  .btn {
-    background-color: #6c5b7b; /* purple */
-    color: #ffffff; /* white text */
-    border: none; /* remove default border */
-    padding: 10px 20px; /* add some padding */
-    text-decoration: none; /* remove underline */
+.form-inline {
+    background-color: #44475a; 
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff; 
+    width: 100%;
+    max-width: 500px; 
+    margin: 15px auto;
+}
+
+.card {
+    background-color: #44475a; 
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff; 
+    width: 100%;
+    max-width: 500px; 
+    margin: 15px auto;
+}
+
+a {
+    color: #50fa7b; 
+}
+
+a:hover {
+    color: #8be9fd;
+}
+
+.btn {
+    background-color: #6c5b7b; 
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none; 
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    transition-duration: 0.4s; /* transition effect on hover */
-    cursor: pointer; /* change cursor when over the button */
-  }
-  
-  .btn:hover {
-    background-color: #c06c84; /* change color on hover */
+    transition-duration: 0.4s; 
+    cursor: pointer; 
+}
+
+.btn:hover {
+    background-color: #c06c84;
     color: black;
-  }
+}
+
+.issue {
+    background-color: #5e2190; 
+    border-radius: 10px;
+    padding: 15px; 
+    margin-bottom: 20px; 
+    width: 50vw; 
+    max-width: 800px;
+    color: #ffffff; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+}
   
-  
+.issue:hover {
+    box-shadow: 0 8px 16px 0 white;
+}

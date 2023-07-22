@@ -1,6 +1,12 @@
 <h1>Issues</h1>
 
 <% @issues.each do |issue| %>
-  <h2><%= issue.title %></h2>
-  <p><%= issue.body %></p>
+  <a href="<%= issue.html_url %>" target="_blank" style="text-decoration: none; color: inherit;">
+    <div class="issue">
+      <h2><%= issue.title %></h2>
+      <p><%= issue.body %></p>
+    </div>
+  </a>
 <% end %>
+
+
