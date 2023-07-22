@@ -5,12 +5,12 @@ class RepositoriesController < ApplicationController
   end
 
   def issues
-    repo = params[:repo]
+    repo = params[:repo].gsub(/\s+/, "") #Remove whitespace
     
     if repo.blank?
-      redirect_to root_path, alert: "Please enter a repo."
+      redirect_to root_path, alert: "Please enter a repo." #Error handling
     elsif !valid_repo_format?(repo)
-      redirect_to root_path, alert: "Invalid repo format. Please enter in 'user/repo' format."
+      redirect_to root_path, alert: "Invalid repo format. Please enter in 'user/repo' format." #Error handling
     else
       @issues = @client.issues(repo)
     end
@@ -21,7 +21,7 @@ class RepositoriesController < ApplicationController
   private
   
   def valid_repo_format?(repo)
-    repo.split('/').length == 2
+    repo.split('/').length == 2 #basic validation
   end
   
   
@@ -29,6 +29,6 @@ class RepositoriesController < ApplicationController
   private
 
   def octokit_client
-    @client ||= Octokit::Client.new(access_token: ENV["GITHUB_TOKEN"])
+    @client ||= Octokit::Client.new(access_token: ENV["GITHUB_TOKEN"]) #Token abstracted to .env
   end  
 end

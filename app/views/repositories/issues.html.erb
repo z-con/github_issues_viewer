@@ -4,7 +4,10 @@
   <a href="<%= issue.html_url %>" target="_blank" style="text-decoration: none; color: inherit;">
     <div class="issue">
       <h2><%= issue.title %></h2>
-      <p><%= issue.body %></p>
+      <%= truncate(issue.body, length: 500, separator: ' ', omission: ' ... (click to read more)') %>
+      <div class="small-card">
+        <b><%= issue.state %></b>
+      </div>
     </div>
   </a>
 <% end %>
