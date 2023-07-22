@@ -6,8 +6,8 @@
 
 <%= form_with url: repositories_issues_path, method: :get do |form| %>
   <div class="form-element">
-    <%= form.label :repo, "Repository" %>
-    <%= form.text_field :repo, placeholder: "username/reponame", class: "form-control" %>
+    <%= form.label :repo, "Repo" %>
+    <%= form.text_field :repo, placeholder: "user/repo", class: "form-control" %>
   </div>
   <div class="form-element">
     <%= form.submit "View Issues", class: "btn" %>
