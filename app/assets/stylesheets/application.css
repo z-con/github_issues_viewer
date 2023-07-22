@@ -45,7 +45,7 @@ body {
 .card {
     background-color: #44475a; 
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 15px;
     color: #fff; 
     width: 100%;
     max-width: 500px; 
