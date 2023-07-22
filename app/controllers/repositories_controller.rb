@@ -6,10 +6,16 @@ class RepositoriesController < ApplicationController
 
   def issues
     repo = params[:repo]
-    @issues = @client.issues(repo)
+    
+    if repo.blank?
+      redirect_to root_path, alert: "Please enter a repository."
+    else
+      @issues = @client.issues(repo)
+    end
   rescue Octokit::NotFound
     redirect_to root_path, alert: "Repository not found"
   end
+  
 
   private
 

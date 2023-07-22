@@ -1,15 +1,61 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+    font-family: sans-serif;
+    color: #ffffff; /* white text */
+    background-color: #282c34; /* dark background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form-inline {
+    background-color: #44475a; /* darker background */
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff; /* white text */
+    width: 100%;
+    max-width: 500px; /* limit width */
+    margin: 15px auto; /* center and add space around */
+  }
+  
+  .card {
+    background-color: #44475a; /* darker background */
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff; /* white text */
+    width: 100%;
+    max-width: 500px; /* limit width */
+    margin: 15px auto; /* center and add space around */
+  }
+  
+  a {
+    color: #50fa7b; /* green text */
+  }
+  
+  a:hover {
+    color: #8be9fd; /* cyan text on hover */
+  }
+
+  .btn {
+    background-color: #6c5b7b; /* purple */
+    color: #ffffff; /* white text */
+    border: none; /* remove default border */
+    padding: 10px 20px; /* add some padding */
+    text-decoration: none; /* remove underline */
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s; /* transition effect on hover */
+    cursor: pointer; /* change cursor when over the button */
+  }
+  
+  .btn:hover {
+    background-color: #c06c84; /* change color on hover */
+    color: black;
+  }
+  
+  
