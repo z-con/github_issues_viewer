@@ -8,14 +8,14 @@ class RepositoriesController < ApplicationController
     repo = params[:repo]
     
     if repo.blank?
-      redirect_to root_path, alert: "Please enter a repository."
+      redirect_to root_path, alert: "Please enter a repo."
     elsif !valid_repo_format?(repo)
-      redirect_to root_path, alert: "Invalid repository format. Please enter in 'user/repo' format."
+      redirect_to root_path, alert: "Invalid repo format. Please enter in 'user/repo' format."
     else
       @issues = @client.issues(repo)
     end
   rescue Octokit::NotFound
-    redirect_to root_path, alert: "Repository not found"
+    redirect_to root_path, alert: "Repo not found"
   end
   
   private
