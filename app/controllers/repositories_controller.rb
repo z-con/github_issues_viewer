@@ -5,7 +5,7 @@ class RepositoriesController < ApplicationController
   end
 
   def issues
-    repo = params[:repo].gsub(/\s+/, "") #Remove whitespace
+    repo = params[:repo].gsub(/[^a-zA-Z0-9\/_-]/, '') #Remove whitespace or invalid chars
     
     if repo.blank?
       redirect_to root_path, alert: "Please enter a repo." #Error handling
