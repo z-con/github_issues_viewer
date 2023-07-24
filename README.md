@@ -1,3 +1,5 @@
+<h1>IssueList.app</h1>
+
 GitHub Issue Viewer
 
 Use this app to view issues within a GitHub Repo
