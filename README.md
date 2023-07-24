@@ -4,7 +4,7 @@ Use this app to view issues within a GitHub Repo
 
 Things to note:
 
--App built on Railway (this saved loads of time, of course)
+-App built on Railway (this saved loads of time, of course) <br>
 -Oktokit gem for accessing the GitHub API
 -Basic validation and error handling for unexpected values, invalid repos, etc
 -Some pretty mediocre styling
