@@ -6,6 +6,8 @@ class RepositoriesController < ApplicationController
 
   def issues
     repo = params[:repo].gsub(/[^a-zA-Z0-9\/_-]/, '').chomp('/') #Remove whitespace or invalid chars
+    Search.create(repo: params[:repo])
+
     
     if repo.blank?
       redirect_to root_path, alert: "Please enter a repo." #Error handling
