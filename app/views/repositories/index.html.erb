@@ -1,19 +1,21 @@
-<h1>IssueList</h1>
-<p>Please enter a GitHub Repo</p>
+<div class="search">
+  <h1>IssueList</h1>
+  <p>Please enter a GitHub Repo</p>
 
-<% if flash[:alert] %>
-  <p><%= flash[:alert] %></p>
-<% end %>
+  <% if flash[:alert] %>
+    <p><%= flash[:alert] %></p>
+  <% end %>
 
-<%= form_with url: repositories_issues_path, method: :get do |form| %>
-  <div class="form-element">
-    <%= form.label :repo, "Repo" %>
-    <%= form.text_field :repo, placeholder: "user/repo", class: "form-control" %>
-  </div>
-  <div class="form-element">
-    <%= form.submit "View Issues", class: "btn" %>
-  </div>
-<% end %>
+  <%= form_with url: repositories_issues_path, method: :get do |form| %>
+    <div class="form-element">
+      <%= form.label :repo, "Repo" %>
+      <%= form.text_field :repo, placeholder: "user/repo", class: "form-control" %>
+    </div>
+    <div class="form-element">
+      <%= form.submit "View Issues", class: "btn" %>
+    </div>
+  <% end %>
 
-<p>Made with ❤️ by <a href="https://github.com/z-con">z-con</a></p>
-<p><a href="https://github.com/z-con/github_issues_viewer">Check out the repo here</a></p>
+  <p>Made with ❤️ by <a href="https://github.com/z-con">z-con</a></p>
+  <p><a href="https://github.com/z-con/github_issues_viewer">Check out the repo here</a></p>
+</div>
