@@ -15,4 +15,5 @@ Things to note:
 -Proper abstraction of env variable <br>
 -Link back home from issues page <br>
 -Links to my profile and repo <br>
--App lives at domain issuelist.app
+-App lives at domain issuelist.app<br>
+-Saves searches to DB
